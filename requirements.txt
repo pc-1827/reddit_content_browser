@@ -1,0 +1,6 @@
+Flask
+Flask-Cors
+SQLAlchemy
+praw
+python-dotenv
+spacy==2.3.1

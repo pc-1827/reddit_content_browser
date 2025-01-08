@@ -1,0 +1,110 @@
+/* frontend/src/App.css */
+.App {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #ff4500;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.search-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-left: 10px;
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #e03e00;
+}
+
+.filters-container {
+  margin-bottom: 20px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters div {
+  display: flex;
+  flex-direction: column;
+}
+
+.filters label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.filters input {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.message {
+  text-align: center;
+  color: green;
+  margin-bottom: 20px;
+}
+
+.posts-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.post {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.post h3 {
+  margin: 0 0 10px 0;
+}
+
+.post p {
+  margin: 5px 0;
+}
+
+.post button {
+  padding: 8px 12px;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.post button:hover {
+  background-color: #005f5f;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  text-decoration: underline;
+}
