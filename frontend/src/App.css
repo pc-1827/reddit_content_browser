@@ -1,194 +1,137 @@
 /* frontend/src/App.css */
+
 .App {
-  font-family: Arial, sans-serif;
   max-width: 800px;
-  margin: auto;
+  margin: 0 auto;
   padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
-h1 {
+h1, h2 {
   text-align: center;
-  color: #ff4500;
 }
 
-.search-container {
-  display: flex;
-  justify-content: center;
+.create-audience,
+.select-audience,
+.search-container,
+.topics-container,
+.posts-container,
+.fetch-topics {
   margin-bottom: 20px;
 }
 
-.search-container input {
-  width: 70%;
-  padding: 10px;
+.create-audience input,
+.select-audience select,
+.search-container input,
+.subreddit-input input {
+  width: 80%;
+  padding: 8px;
+  margin-right: 10px;
   font-size: 16px;
 }
 
-.search-container button {
-  padding: 10px 20px;
-  font-size: 16px;
-  margin-left: 10px;
-  background-color: #ff4500;
+.subreddit-input {
+  display: flex;
+  margin-top: 10px;
+}
+
+.subreddit-input input {
+  width: 70%;
+}
+
+.subreddit-input button {
+  width: 25%;
+  padding: 8px;
+  font-size: 14px;
+  background-color: #007BFF;
   color: white;
   border: none;
   cursor: pointer;
+  border-radius: 3px;
 }
 
-.search-container button:hover {
-  background-color: #e03e00;
+.subreddit-input button:hover {
+  background-color: #0056b3;
 }
 
-.filters-container {
-  margin-bottom: 20px;
+.subreddit-list {
+  margin-top: 10px;
 }
 
-.filters {
-  display: flex;
-  justify-content: space-between;
+.subreddit-item {
+  display: inline-block;
+  background-color: #e2e2e2;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin: 5px 5px 0 0;
 }
 
-.filters div {
-  display: flex;
-  flex-direction: column;
-}
-
-.filters label {
-  margin-bottom: 5px;
+.subreddit-item button {
+  background: none;
+  border: none;
+  margin-left: 5px;
+  cursor: pointer;
   font-weight: bold;
+  color: #ff0000;
 }
 
-.filters input {
-  padding: 5px;
+.create-audience button,
+.search-container button,
+.topics-container button,
+.post button,
+.fetch-topics button {
+  padding: 8px 16px;
   font-size: 14px;
+  background-color: #555;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+.create-audience button:hover,
+.search-container button:hover,
+.topics-container button:hover,
+.post button:hover,
+.fetch-topics button:hover {
+  background-color: #333;
+}
+
+.topics-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.topics-list button {
+  background-color: #28a745;
+}
+
+.topics-list button:hover {
+  background-color: #1e7e34;
 }
 
 .message {
   text-align: center;
-  color: green;
-  margin-bottom: 20px;
+  color: red;
 }
 
-.posts-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.post {
+.posts-container .post {
   border: 1px solid #ddd;
   padding: 15px;
-  margin-bottom: 10px;
   border-radius: 5px;
+  margin-bottom: 15px;
 }
 
-.post h3 {
+.posts-container .post h3 {
   margin: 0 0 10px 0;
 }
 
-.post p {
-  margin: 5px 0;
-}
-
-.post button {
-  padding: 8px 12px;
-  background-color: #008cba;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 3px;
-}
-
-.post button:hover {
-  background-color: #005f5f;
-}
-
-a {
-  text-decoration: none;
-  color: #333;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.subreddits-container {
-  margin-bottom: 20px;
-}
-
-.subreddits-container select {
-  width: 100%;
-  height: 100px;
-  padding: 10px;
-  font-size: 14px;
-}
-
-.subreddits-container button {
-  margin-top: 10px;
-  padding: 6px 12px;
-  font-size: 14px;
-  background-color: #555;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 3px;
-}
-
-.subreddits-container button:hover {
-  background-color: #333;
-}
-
-.view-toggle {
-  margin-bottom: 20px;
-}
-
-.view-toggle button {
-  padding: 8px 16px;
+.posts-container .post button {
   margin-right: 10px;
-  font-size: 14px;
-  background-color: #555;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 3px;
 }
 
-.view-toggle button:disabled {
-  background-color: #999;
-  cursor: not-allowed;
-}
-
-.view-toggle button:hover:not(:disabled) {
-  background-color: #333;
-}
-
-.content-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.comments-container {
-  border: 1px solid #ddd;
-  padding: 15px;
-  border-radius: 5px;
-}
-
-.comments-container button {
-  padding: 6px 12px;
-  margin-bottom: 10px;
-  background-color: #555;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 3px;
-}
-
-.comments-container button:hover {
-  background-color: #333;
-}
-
-.comment {
-  border-bottom: 1px solid #eee;
-  padding: 10px 0;
-}
-
-.comment:last-child {
-  border-bottom: none;
+.posts-container .post button:last-child {
+  margin-right: 0;
 }
